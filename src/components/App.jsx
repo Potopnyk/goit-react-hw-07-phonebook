@@ -1,16 +1,21 @@
+import { ToastContainer } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
+import { ContactForm } from './phonebook/contactForm';
+import { ContactList } from './contactList/ContactsList';
+import { Filter } from './filter/Filter';
+import { NameHeader, SecondaryNameHeader, Section } from './App.styled';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Section>
+      <NameHeader>Phonebook</NameHeader>
+
+      <ContactForm />
+      <SecondaryNameHeader>Contacts</SecondaryNameHeader>
+      
+      <Filter />
+      <ContactList />
+      <ToastContainer position="top-center" />
+    </Section>
   );
 };
